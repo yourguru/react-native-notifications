@@ -41,6 +41,9 @@
     "@types/react-test-renderer": "16.x.x",
     "@babel/plugin-proposal-export-default-from": "7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "7.2.0",
+    "@babel/core": "7.5.5",
+    "@babel/runtime": "7.5.5",
+    "@babel/register": "7.5.5",
     "typescript": "3.2.2",
     "babel-eslint": "9.0.0",
     "chai": "^3.5.0",
@@ -51,12 +54,11 @@
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "shell-utils": "1.x.x",
-    "react-native": "0.60.0",
+    "react-native": "0.60.4",
     "react": "16.8.6",
     "detox": "13.x.x",
     "jest": "24.8.0",
-    "metro-react-native-babel-preset": "0.55.x",
-    "@babel/register": "7.4.4"
+    "metro-react-native-babel-preset": "0.54.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

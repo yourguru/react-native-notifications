@@ -7,6 +7,7 @@ import android.content.Context;
 import com.wix.reactnativenotifications.core.AppLaunchHelper;
 import com.wix.reactnativenotifications.core.InitialNotificationHolder;
 
+
 public class PushNotificationsDrawer implements IPushNotificationsDrawer {
 
     final protected Context mContext;

@@ -8,8 +8,6 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.wix.reactnativenotifications.core.notification.IPushNotification;
 import com.wix.reactnativenotifications.core.notification.PushNotification;
 
-import java.util.Map;
-
 import static com.wix.reactnativenotifications.Defs.LOGTAG;
 
 /**

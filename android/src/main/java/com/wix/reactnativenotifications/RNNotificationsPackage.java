@@ -4,14 +4,11 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.facebook.react.ReactPackage;
-import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
-import com.google.firebase.FirebaseApp;
 import com.wix.reactnativenotifications.core.AppLifecycleFacade;
 import com.wix.reactnativenotifications.core.AppLifecycleFacadeHolder;
 import com.wix.reactnativenotifications.core.notification.IPushNotification;
@@ -22,9 +19,6 @@ import com.wix.reactnativenotifications.core.notificationdrawer.PushNotification
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-
-import static com.wix.reactnativenotifications.Defs.LOGTAG;
 
 public class RNNotificationsPackage implements ReactPackage, AppLifecycleFacade.AppVisibilityListener, Application.ActivityLifecycleCallbacks {
 
@@ -32,7 +26,6 @@ public class RNNotificationsPackage implements ReactPackage, AppLifecycleFacade.
 
     public RNNotificationsPackage(Application application) {
         mApplication = application;
-        FirebaseApp.initializeApp(application.getApplicationContext());
 
         AppLifecycleFacadeHolder.get().addVisibilityListener(this);
         application.registerActivityLifecycleCallbacks(this);

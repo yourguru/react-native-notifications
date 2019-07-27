@@ -182,3 +182,4 @@ jspm_packages
 coverage/
 
 package-lock.json
+example/android/app/google-services.json
