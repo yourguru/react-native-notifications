@@ -22,9 +22,12 @@
   "main": "lib/src/index",
   "scripts": {
     "pretest": "./node_modules/.bin/eslint *.js test",
+    "clean": "node ./scripts/clean",
     "test": "jest",
     "start": "node ./scripts/start",
-    "test-e2e-ios": "node ./scripts/test-e2e --ios"
+    "test-e2e-ios": "node ./scripts/test-e2e --ios",
+    "test-unit-ios": "node ./scripts/test-unit --ios",
+    "test-js": "node ./scripts/test-js"
   },
   "nativePackage": true,
   "dependencies": {
