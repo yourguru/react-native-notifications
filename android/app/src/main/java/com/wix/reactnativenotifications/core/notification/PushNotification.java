@@ -64,9 +64,6 @@ public class PushNotification implements IPushNotification {
     public void onReceived() throws InvalidNotificationException {
         postNotification(null);
         notifyReceivedToJS();
-        if (mAppLifecycleFacade.isAppVisible()) {
-            notifiyReceivedForegroundNotificationToJS();
-        }
     }
 
     @Override
