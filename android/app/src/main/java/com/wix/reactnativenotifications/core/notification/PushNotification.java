@@ -200,7 +200,7 @@ public class PushNotification implements IPushNotification {
     }
 
     private void notifiyReceivedForegroundNotificationToJS() {
-            mJsIOHelper.sendEventToJS(NOTIFICATION_RECEIVED_FOREGROUND_EVENT_NAME, mNotificationProps.asBundle(), mAppLifecycleFacade.getRunningReactContext());
+        mJsIOHelper.sendEventToJS(NOTIFICATION_RECEIVED_FOREGROUND_EVENT_NAME, mNotificationProps.asBundle(), mAppLifecycleFacade.getRunningReactContext());
     }
 
     private void notifyOpenedToJS() {
