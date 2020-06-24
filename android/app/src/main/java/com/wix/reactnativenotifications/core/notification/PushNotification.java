@@ -62,7 +62,7 @@ public class PushNotification implements IPushNotification {
 
     @Override
     public void onReceived() throws InvalidNotificationException {
-        postNotification(null);
+        // postNotification(null); looks like this show empty push notification in foreground
         notifyReceivedToJS();
         if (mAppLifecycleFacade.isAppVisible()) {
             notifiyReceivedForegroundNotificationToJS();
