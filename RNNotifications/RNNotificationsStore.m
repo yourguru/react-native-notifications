@@ -7,7 +7,7 @@ NSMutableDictionary* _presentationCompletionHandlers;
 + (instancetype)sharedInstance {
     static RNNotificationsStore *sharedInstance = nil;
     static dispatch_once_t onceToken;
-    
+
     dispatch_once(&onceToken, ^{
         sharedInstance = [[RNNotificationsStore alloc] init];
     });
@@ -40,8 +40,10 @@ NSMutableDictionary* _presentationCompletionHandlers;
 - (void)completeAction:(NSString *)completionKey {
     void (^completionHandler)() = (void (^)())[_actionCompletionHandlers valueForKey:completionKey];
     if (completionHandler) {
-        completionHandler();
-        [_actionCompletionHandlers removeObjectForKey:completionKey];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler();
+            [_actionCompletionHandlers removeObjectForKey:completionKey];
+        });
     }
 }
 
